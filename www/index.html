@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <header class="bg-danger d-flex">
+      <img
+        src="./img/pokeapi_256.png"
+        class="me-auto mb-auto"
+        style="width: 15%;"
+        alt="logo pokeapi"
+      />
+      <nav class="navbar navbar-expand-lg d-flex justify-content-end">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+              style="--bs-scroll-height: 100px"
+            >
+              <li class="nav-item"></li>
+              <li class="nav-item"></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Types
+                </a>
+                <div id="typesPokemon" this>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getTypes(this)"
+                        name="1"
+                        >Normal</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item vol"
+                        onclick="getTypes(this)"
+                        name="2"
+                        >Vol</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="3"
+                        >Combat</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="4"
+                        >Poison</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="5"
+                        >Roche</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="6"
+                        >Insecte</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="7"
+                        >Spectre</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="8"
+                        >Acier</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" onclick="getTypes(this)" name="9"
+                        >Feu</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="10"
+                        >Eau</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="11"
+                        >Plante</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="12"
+                        >Electrik</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="13"
+                        >Psy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="14"
+                        >Glace</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="15"
+                        >Dragon</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="16"
+                        >Ténèbres</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="17"
+                        >Fée</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        onclick="getTypes(this)"
+                        name="10002"
+                        >Sol</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-light"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Génération
+                </a>
+                <div id="GenerationPokemon" this>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="1"
+                        >Generation 1</a
+                        >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="2"
+                        >Generation 2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="3"
+                        >Generation 3</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="4"
+                        >Generation 4</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="5"
+                        >Generation 5</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="6"
+                        >Generation 6</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="7"
+                        >Generation 7</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item normal"
+                        onclick="getGeneration(this)"
+                        name="8"
+                        >Generation 8</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <button
+              id="hasard"
+              class="btn btn-outline-light m-2"
+              onclick="pokemonHasard()"
+            >
+              Pokemon au hasard
+            </button>
+            <form class="d-flex" role="search">
+              <input
+                type="text"
+                id="searchBar"
+                class="form-control me-2"
+                placeholder="Rechercher un Pokémon..."
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <button class="btn btn-danger m-3" type="submit" onclick="allPokemon()">
+        Afficher tous les Pokemon
+      </button>
+      <div class="container">
+        <div id="carteMain" class="row row-cols-3"></div>
+        <div id="carteSolo"></div>
+      </div>
+    </main>
+    <footer class="bg-danger text-center text-light">
+      <p>Copyright &copy; 2023</p>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+</html>
